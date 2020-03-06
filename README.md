@@ -26,4 +26,4 @@ shape
 
 ## Output Screen Shots
 
-![](ScreenShot_1.png)
+![](screen_shot/ScreenShot_1.png)
