@@ -59,7 +59,7 @@ body {
 }
 
 .filters .panel-body {
-  padding: 0;
+  padding: 10px;
 }
 
 .filters {
@@ -223,4 +223,28 @@ select {
   to {
     opacity: 1;
   }
+}
+
+#filter-btn{
+  color: #eeeeee; 
+  background: transparent; 
+  border: 1px solid #eeeeee;
+  border-radius: 6px; 
+  margin-left: 14px;
+}
+
+#filter-btn:hover {      background-color: #1b3146;      color: #eeeeee; }
+
+#reset-btn{
+  color: #eeeeee; 
+  background: transparent; 
+  border: 1px solid #eeeeee;
+  border-radius: 6px; 
+  margin-left: 14px;
+}
+
+#reset-btn:hover {      background-color: #1b3146;      color: #eeeeee; }
+
+.divider{
+  margin: 10px;
 }
