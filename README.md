@@ -18,12 +18,16 @@
 
 * Using multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
-date/time
-city
-state
-country
-shape
+ * date/time
+ * city
+ * state
+ * country
+ * shape
 
-## Output Screen Shots
+## link to the site:
+
+https://arundhatic.github.io/UFO-Sighting/
+
+## Screen Shots
 
 ![](screen_shot/ScreenShot_1.png)
