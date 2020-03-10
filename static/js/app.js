@@ -19,6 +19,18 @@ function buildTable(ufoData){
   });
 }
 
+const multiFilter = (arr, filters) => {
+    const filterKeys = Object.keys(filters);
+    return arr.filter(eachObj => {
+      return filterKeys.every(eachKey => {
+        if (!filters[eachKey].length) {
+          return true; // passing an empty filter means that filter is ignored.
+        }
+        return filters[eachKey].includes(eachObj[eachKey]);
+      });
+    });
+  };
+
 function filterSearch(){
 	
 	d3.event.preventDefault();
@@ -29,36 +41,17 @@ function filterSearch(){
 	var searchCountry = d3.select("#country").property("value");
     var searchShape = d3.select("#shape").property("value");
 
-    var filteredDatas = data;
-
-	if (searchDate){
-        console.log(searchDate)
-        filteredDatas = tableData.filter(filterdata => String(filterdata.datetime) === String(searchDate));
-        console.log(filteredDatas)
-    }
-    if (searchCity){
-        console.log(searchCity)
-        filteredDatas = tableData.filter(filterdata => filterdata.city.toLowerCase() === searchCity.toLowerCase());
-        console.log(filteredDatas)
-    }
-    if (searchState){
-        console.log(searchState)
-        filteredDatas = tableData.filter(filterdata => filterdata.state.toLowerCase() === searchState.toLowerCase());
-        console.log(filteredDatas)
-        }
-    if (searchCountry){
-        console.log(searchCountry)
-        filteredDatas = tableData.filter(filterdata => filterdata.country.toLowerCase() === searchCountry.toLowerCase());
-        console.log(filteredDatas)
-        }
-    if (searchShape){
-        console.log(searchShape)
-        filteredDatas = tableData.filter(filterdata => filterdata.shape.toLowerCase() === searchShape.toLowerCase());
-        console.log(filteredDatas)
-        }
-
+    const filters = {
+        datetime: searchDate,
+        city: searchCity,
+        state: searchState,
+        country: searchCountry,
+        shape: searchShape
+      };
     
-    buildTable(filteredDatas);
+    console.log(multiFilter(data,filters))
+	    
+    buildTable(multiFilter(data,filters));
 }
 
 
