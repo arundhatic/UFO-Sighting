@@ -63,7 +63,6 @@ function filterSearch(){
 
 
 function resetSearch() {
-	tbody.html('');
 	buildTable(tableData);
 }
 
