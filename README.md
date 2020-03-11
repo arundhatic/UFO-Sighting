@@ -30,4 +30,5 @@ https://arundhatic.github.io/UFO-Sighting/
 
 ## Screen Shots
 
-![](screen_shot/ScreenShot_1.png)
+![](screen_shot/ScreenShot_2.png)
+![](screen_shot/ScreenShot_3.png)
